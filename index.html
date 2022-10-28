@@ -5,7 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>miweb</title>
         <link type="text/css" rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+        <script src="./js/jquery.js"></script>
         <script src="./js/app.js"></script>
+        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -29,7 +32,13 @@
                     </nav>
                 </div>
             </header>
+            <div class="slider">
+                <img class="slider__img" src="./images/green.jpg" alt="green">            
+                <img class="slider__img" src="./images/red.jpg" alt="red">            
+                <img class="slider__img" src="./images/blue.jpg" alt="blue">            
+            </div>
             <main class="main">
+
                 <section class="section">
                     <article class="section__article">
                         <div class="article--header">
@@ -74,12 +83,12 @@
                 </section>
                 <aside class="aside">
                     <div class="whoim">
-                        <h2>¿Quién soy?</h2>
+                        <h2><span>¿Quién soy?</span></h2>
                         <img class="whoim__img" src="./images/i.webp" alt="Yo">
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto quae non, quidem ipsam corporis odit.</p>
                     </div>
                     <div class="singup">
-                        <h2>Identificate</h2>
+                        <h2><span>Identificate</span></h2>
                         <form class="singup__form">
                             <label for="name">Nombre</label>
                             <input type="text" name="name" placeholder="escribe tu nombre aquí" autocomplete="off">

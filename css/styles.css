@@ -10,18 +10,18 @@ img{
     max-width: 100%;
 }
 body{
-    background-color: gray;
+    background: url("../images/green.jpg") fixed;
     margin: 0;
+    height: 100%;
 }
 .wrapper{
-    background-color: aquamarine;
+    background-color: #fff;
     max-width: 1000px;
     margin: 0 auto;
     padding: 2em 2em 0;
 }
 /* header */
 .header--1{
-    background-color: beige;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -50,13 +50,10 @@ body{
 #header__form input:nth-child(2){
     border-left: none;
 }
-.header--2{
-    background-color:coral;
-}
 .header__ul--container{
     display: flex;
     padding-left: 0;
-    background-color: #000;
+    background-color: #222;
 }
 .header__ul--container li{
     list-style: none;
@@ -75,26 +72,28 @@ body{
     font-size: 1.1em;
     color: #fff;
 }
-
+/* slider */
+.slider,
+.slider__img{
+    max-height: 400px !important;
+}
+.slider__img{
+    object-fit: cover;
+    object-position: center;
+}
 /* main */
 .main{
     display: flex;
     justify-content: space-between;
     gap: 1em;
 }
-
 .section{
-    background-color: burlywood;
     max-width: 55%;
     display: grid;
     grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 1.5em;
-}
-.section__article{
-    background-color: cornsilk;
+    gap: 2em;
 }
 .article--header{
-    background-color: aqua;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -126,12 +125,17 @@ body{
 
 /* aside */
 .aside{
-    background-color: burlywood;
     max-width: 320px;
+    margin-top: 3em;
 }
-
-.whoim h2{
-
+aside h2{
+     background-image: url(../images/lines.png);
+     text-align: center;
+     font-size: 1.2em;
+}
+aside h2 span{
+    background-color: #fff;
+    padding: 0 .5em;
 }
 .whoim__img{
     width: 320px;
@@ -139,7 +143,9 @@ body{
     object-fit: cover;
     object-position: center;
 }
-
+.whoim p{
+    text-align: justify;
+}
 .singup{
     margin-top: 3em;
 }
@@ -186,11 +192,11 @@ input:focus{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: lightcoral;
     margin-top: 1em;
 }
 .footer p{
     font-weight: 300;
+    font-size: .9em;
 }
 .footer a{
     text-decoration: none;
