@@ -1,8 +1,5 @@
 $(document).ready(()=>{
-    // slider
-    $(".slider").bxSlider()
-
-    // articles
+    // dynamic articles
     let posts = [
         {
             title: "¡Hello World!",
@@ -43,24 +40,5 @@ $(document).ready(()=>{
             <p class="paragraph">${article.content}</p>
         </article>`;
         $(".section").append(post);
-    });
-
-    // change theme
-    let theme = $("#theme");
-    $("#to-green").click(()=>{
-        theme.attr("href", "./css/green-theme.css")
-    });
-    $("#to-red").click(()=>{
-        theme.attr("href", "./css/red-theme.css")
-    });
-    $("#to-blue").click(()=>{
-        theme.attr("href", "./css/blue-theme.css")
-    });
-
-    //go up
-    $("#go-up").click((e)=>{
-        e.preventDefault();
-
-        $("html, body").animate({scrollTop: 0},400);
     });
 });

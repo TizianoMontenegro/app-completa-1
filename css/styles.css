@@ -100,6 +100,7 @@ body{
     grid-template-rows: repeat(auto-fit, 1fr);
     gap: 2em;
 }
+/* articles of index.html */
 .article--header{
     display: flex;
     justify-content: space-between;
@@ -241,3 +242,11 @@ input:focus{
 #to-green{background-color: #060;}
 #to-red{background-color: #f33;}
 #to-blue{background-color: #33f;}
+
+/* Accordion of about-me.html */
+.accordion{
+    width: 320px;
+}
+.box li a{
+    font-weight: 500;
+}
