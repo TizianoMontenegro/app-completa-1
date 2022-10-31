@@ -1,0 +1,11 @@
+#clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 2em;
+    font-size: 1.5em;
+    border-radius: .8em;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+#clock--title{margin-left: .5em;}

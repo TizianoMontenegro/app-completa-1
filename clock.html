@@ -6,6 +6,7 @@
         <title>myweb</title>
 
         <link type="text/css" rel="stylesheet" href="./css/styles.css">
+        <link type="text/css" rel="stylesheet" href="./css/clock.css">
         <link id="theme" type="text/css" rel="stylesheet" href="./css/green-theme.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.min.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.structure.min.css">
@@ -13,10 +14,9 @@
 
         <script src="./jquery.js"></script>
         <script src="./moment.js"></script>
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
         <script src="./jquery-ui/jquery-ui.min.js"></script>
         <script src="./js/clock.js"></script>
-        <script src="./js/allfiles.js"></script>
+        <script src="./js/app.js"></script>
     </head>
     <body>
         <div class="change__theme">
@@ -48,6 +48,8 @@
             <main class="main">
 
                 <section class="section">
+                    <h2 id="clock--title">What time is it?</h2>
+                    <div id="clock"><p></p></div>
                 </section>
                 <aside class="aside">
                     <div class="whoim">
@@ -71,7 +73,6 @@
             </main>
             <footer class="footer">
                 <p><strong>©Tiziano Montenegro</strong>. All Right Reserved</p>
-                <a id="go-up" href="">go up</a>
             </footer>
         </div>
     </body>

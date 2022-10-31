@@ -1,0 +1,5 @@
+/* Accordion */
+.accordion{width: 320px;}
+.box li a{font-weight: 500;}
+
+.pr-color{color: var(--primary-color);}

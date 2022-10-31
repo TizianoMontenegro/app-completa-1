@@ -1,44 +1,39 @@
 $(document).ready(()=>{
-    // dynamic articles
-    let posts = [
-        {
-            title: "¡Hello World!",
-            date: "Posted on "+moment().format("MMM Do YYYY"),
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odit dolores minima quia sit quae error consequatur? Maxime dolores dignissimos odio nisi reprehenderit eligendi, facilis repudiandae ducimus ipsum? Fugit, dolores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni."
-        },
-        {
-            title: "¡Hello World!",
-            date: "Posted on "+moment().format("MMM Do YYYY"),
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odit dolores minima quia sit quae error consequatur? Maxime dolores dignissimos odio nisi reprehenderit eligendi, facilis repudiandae ducimus ipsum? Fugit, dolores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni."
-        },
-        {
-            title: "¡Hello World!",
-            date: "Posted on "+moment().format("MMM Do YYYY"),
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odit dolores minima quia sit quae error consequatur? Maxime dolores dignissimos odio nisi reprehenderit eligendi, facilis repudiandae ducimus ipsum? Fugit, dolores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni."
-        },
-        {
-            title: "¡Hello World!",
-            date: "Posted on "+moment().format("MMM Do YYYY"),
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odit dolores minima quia sit quae error consequatur? Maxime dolores dignissimos odio nisi reprehenderit eligendi, facilis repudiandae ducimus ipsum? Fugit, dolores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni."
-        },
-        {
-            title: "¡Hello World!",
-            date: "Posted on "+moment().format("MMM Do YYYY"),
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odit dolores minima quia sit quae error consequatur? Maxime dolores dignissimos odio nisi reprehenderit eligendi, facilis repudiandae ducimus ipsum? Fugit, dolores? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quasi fugit, vero sunt harum explicabo dolores molestias dicta numquam maiores eum repudiandae debitis odit veritatis. Blanditiis iure fugiat veniam magni."
-        }
-    ];
-    posts.forEach((article, index)=>{
-        let post = `
-        <article class="section__article">
-            <div class="article--header">
-                <div class="article__left">
-                    <h2>${article.title}</h2>
-                    <p>${article.date}</p>
-                </div>
-                <button>📰 Comments</button>
-            </div>
-            <p class="paragraph">${article.content}</p>
-        </article>`;
-        $(".section").append(post);
+    // autocomplete
+    let listAutoComplete = ["JavaScript","Pyton","Java","Go","C++","Ruby","PHP","TypeScript","C#","C","Shell","Scala","Swift","Rust","Kotlin","Objetive-C","Groovy","Elixir","Lua","Dart"];
+    $("#header__search").autocomplete({source: listAutoComplete});
+
+    // change theme
+    let theme = $("#theme");
+    $("#to-green").click(()=>{
+        theme.attr("href", "./css/green-theme.css")
     });
+    $("#to-red").click(()=>{
+        theme.attr("href", "./css/red-theme.css")
+    });
+    $("#to-blue").click(()=>{
+        theme.attr("href", "./css/blue-theme.css")
+    });
+
+    // sing up
+    $(".singup__form").submit(function(e){
+        let formName = $("#name__form").val();
+        if(formName != null && formName != "" && formName != undefined && !formName.includes(" ")){
+            localStorage.setItem("name", formName);
+        }else{
+            e.preventDefault();
+            alert("Tienes que completar todos los campos");
+        }
+    });
+    let formName = localStorage.getItem("name");
+    if(formName != null && formName != " " && formName != undefined){
+        let paragraph = $(".whoim p");
+        paragraph.html("¡¡¡Welcome " + formName + "!!!");
+        $(".singup").hide();
+        paragraph.append("<a id='logout' style='float: right;text-decoration: none;' href='#'>Log out</a>")
+        $("#logout").click(()=>{
+            localStorage.clear();
+            window.location.reload()
+        })
+    }
 });

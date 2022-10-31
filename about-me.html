@@ -6,19 +6,23 @@
         <title>myweb</title>
 
         <link type="text/css" rel="stylesheet" href="./css/styles.css">
+        <link type="text/css" rel="stylesheet" href="./css/about-me.css">
         <link id="theme" type="text/css" rel="stylesheet" href="./css/green-theme.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.min.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.structure.min.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.theme.min.css">
 
         <script src="./jquery.js"></script>
-        <script src="./moment.js"></script>
-        <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
         <script src="./jquery-ui/jquery-ui.min.js"></script>
         <script src="./js/about-me.js"></script>
-        <script src="./js/allfiles.js"></script>
+        <script src="./js/app.js"></script>
     </head>
     <body>
+        <div class="change__theme">
+            <div class="theme--box" id="to-green"></div>
+            <div class="theme--box" id="to-red"></div>
+            <div class="theme--box" id="to-blue"></div>
+        </div>
         <div class="wrapper">
             <header id="header-container">
                 <div class="header--1">
@@ -62,7 +66,7 @@
                         </div>
                         <h3>Extra fact</h3>
                         <div class="box">
-                            <h2>¡¡¡I <span style="color: #f00;">love</span> programming!!!</h2>
+                            <h2>¡¡¡I <span style="color: #f00;">love</span> <span class="pr-color">programming</span>!!!</h2>
                         </div>
                     </div>
                 </section>
@@ -88,7 +92,6 @@
             </main>
             <footer class="footer">
                 <p><strong>©Tiziano Montenegro</strong>. All Right Reserved</p>
-                <a id="go-up" href="">go up</a>
             </footer>
         </div>
     </body>

@@ -66,18 +66,14 @@ body{
     padding: 1em 1.5em;
     transition: background-color .2s;
 }
-
-.header__ul--container li:hover{
-    background-color: var(--primary-color);
-}
-.header__ul--container li:active{
-    filter: brightness(1.1);
-}
+.header__ul--container li:hover{background-color: var(--primary-color);}
+.header__ul--container li:active{filter: brightness(1.1);}
 .header__ul--container a{
     text-decoration: none;
     font-size: 1.1em;
     color: #fff;
 }
+
 /* slider */
 .slider,
 .bx-viewport{
@@ -94,43 +90,7 @@ body{
     justify-content: space-between;
     gap: 1em;
 }
-.section{
-    max-width: 55%;
-    display: grid;
-    grid-template-rows: repeat(auto-fit, 1fr);
-    gap: 2em;
-}
-/* articles of index.html */
-.article--header{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-.article--header button{
-    height: min-content;
-    padding: .5em 1em;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: 1px solid #000;
-    transition: filter .2s;
-    border-radius: var(--br);
-}
-.article--header button:hover{
-    filter: brightness(1.5);
-}
-.article--header button:active{
-    filter: brightness(1);
-}
-.article__left h2{
-    font-size: 2em;
-    margin: 0;
-}
-.article__left p{
-    margin: 0;
-}
-.paragraph{
-    text-align: justify;
-}
+.section{max-width: 55%;}
 
 /* aside */
 .aside{
@@ -155,12 +115,8 @@ aside h2 span{
     object-position: center;
     border-radius: var(--br);
 }
-.whoim p{
-    text-align: justify;
-}
-.singup{
-    margin-top: 3em;
-}
+.whoim p{text-align: justify;}
+.singup{margin-top: 3em;}
 .singup__form{
     display: flex;
     flex-direction: column;
@@ -171,9 +127,7 @@ aside h2 span{
     transition: background-color .2s;
     border-radius: var(--br);
 }
-.singup__form input:hover{
-    background-color: #ddd;
-}
+.singup__form input:hover{background-color: #ddd;}
 .singup__form input:focus{
     background-color: #eee;
     border-radius: var(--br);
@@ -184,12 +138,8 @@ aside h2 span{
     color: #fff;
     font-size: 1.1em;
 }
-.singup__form input[type="submit"]:hover{
-    filter: brightness(1.5);
-}
-.singup__form input[type="submit"]:active{
-    filter: brightness(1);
-}
+.singup__form input[type="submit"]:hover{filter: brightness(1.5);}
+.singup__form input[type="submit"]:active{filter: brightness(1);}
 .singup__form label{
     font-weight: 500;
     font-size: 1.1em;
@@ -212,6 +162,7 @@ input:focus{
     font-weight: 300;
     font-size: .9em;
 }
+.footer p strong{color: var(--primary-color);}
 .footer a{
     text-decoration: none;
     color: #00f;
@@ -242,11 +193,3 @@ input:focus{
 #to-green{background-color: #060;}
 #to-red{background-color: #f33;}
 #to-blue{background-color: #33f;}
-
-/* Accordion of about-me.html */
-.accordion{
-    width: 320px;
-}
-.box li a{
-    font-weight: 500;
-}

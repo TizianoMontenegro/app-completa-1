@@ -1,0 +1,23 @@
+.section{max-width: 55%;}
+.article--header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.article--header button{
+    height: min-content;
+    padding: .5em 1em;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: 1px solid #000;
+    transition: filter .2s;
+    border-radius: var(--br);
+}
+.article--header button:hover{filter: brightness(1.5);}
+.article--header button:active{filter: brightness(1);}
+.article__left h2{
+    font-size: 2em;
+    margin: 0;
+}
+.article__left p{margin: 0;}
+.paragraph{text-align: justify;}
