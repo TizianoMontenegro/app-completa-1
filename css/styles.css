@@ -73,6 +73,9 @@ body{
     font-size: 1.1em;
     color: #fff;
 }
+.link--active{
+    background-color: var(--primary-color);
+}
 
 /* slider */
 .slider,
@@ -126,10 +129,11 @@ aside h2 span{
     border: none;
     transition: background-color .2s;
     border-radius: var(--br);
+    background-color: #eee;
 }
 .singup__form input:hover{background-color: #ddd;}
 .singup__form input:focus{
-    background-color: #eee;
+    background-color: #fff;
     border-radius: var(--br);
 }
 .singup__form input[type="submit"]{

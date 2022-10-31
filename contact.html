@@ -6,6 +6,7 @@
         <title>myweb</title>
 
         <link type="text/css" rel="stylesheet" href="./css/styles.css">
+        <link type="text/css" rel="stylesheet" href="./css/contact.css">
         <link id="theme" type="text/css" rel="stylesheet" href="./css/green-theme.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.min.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.structure.min.css">
@@ -38,7 +39,7 @@
                             <li><a href="calculator.html">Calculator</a></li>
                             <li><a href="clock.html">Clock</a></li>
                             <li><a href="about-me.html">About me</a></li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li class="link--active"><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -46,7 +47,42 @@
             <main class="main">
 
                 <section class="section">
-                    <!-- articles loaded from js -->
+                    <form action="" id="contact--form">
+                        <div class="contact--form__item">
+                            <label for="name">Name <span class="reqop">(required)</span></label>
+                            <input type="text" name="name" autocomplete="off" required>
+                        </div>
+                        <div class="contact--form__item">
+                            <label for="surname">Surname <span class="reqop">(required)</span></label>
+                            <input type="text" name="surname" autocomplete="off" required>
+                        </div>
+                        <div class="contact--form__item">
+                            <label for="email">Email <span class="reqop">(required)</span></label>
+                            <input type="email" name="email" autocomplete="off" required>
+                        </div>
+                        <div class="contact--form__item">
+                            <label for="age">Age <span class="reqop">(optional)</span></label>
+                            <input type="number" name="age">
+                        </div>
+                        <div class="contact--form__item">
+                            <label for="date">Date of Birth <span class="reqop">(optional)</span></label>
+                            <input type="date" name="date" id="datepicker">
+                        </div>
+                        <div class="contact--form__item">
+                            <label for="sex">Sex <span class="reqop">(optional)</span></label>
+                            <select name="sex">
+                                <option value="man">man</option>
+                                <option value="woman">woman</option>
+                            </select>
+                        </div>
+                        <div class="contact--form__item">
+                            <label for="message">Message <span class="reqop">(required)</span></label>
+                            <textarea name="message" required></textarea>
+                        </div>
+                        <div class="contact--form__item">
+                            <input id="contact--submit" type="submit" value="Send">
+                        </div>
+                    </form>
                 </section>
                 <aside class="aside">
                     <div class="whoim">
@@ -58,11 +94,11 @@
                         <h2><span>Sing up</span></h2>
                         <form class="singup__form">
                             <label for="name">Name</label>
-                            <input id="name__form" type="text" name="name" placeholder="escribe tu nombre aquí" autocomplete="off" maxlength="10" minlength="3">
+                            <input id="name__form" type="text" name="name" autocomplete="off" maxlength="10" minlength="3">
                             <label for="email">Email</label>
-                            <input type="email" name="email" placeholder="escribe tu email aquí">
+                            <input type="email" name="email">
                             <label for="password">Password</label>
-                            <input type="password" name="password" placeholder="escribe contraseña aquí">
+                            <input type="password" name="password">
                             <input type="submit" value="Sing up">
                         </form>
                     </div>
