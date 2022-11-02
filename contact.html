@@ -6,15 +6,14 @@
         <title>myweb</title>
 
         <link type="text/css" rel="stylesheet" href="./css/styles.css">
+        <link type="text/css" rel="stylesheet" href="./css/validator-styles/screen.css">
         <link type="text/css" rel="stylesheet" href="./css/contact.css">
         <link id="theme" type="text/css" rel="stylesheet" href="./css/green-theme.css">
-        <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.min.css">
-        <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.structure.min.css">
-        <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.theme.min.css">
 
         <script src="./jquery.js"></script>
         <script src="./jquery-ui/jquery-ui.min.js"></script>
         <script src="./js/contact.js"></script>
+        <script src="./jquery.validate.js"></script>
         <script src="./js/app.js"></script>
     </head>
     <body>
@@ -49,16 +48,16 @@
                 <section class="section">
                     <form action="" id="contact--form">
                         <div class="contact--form__item">
-                            <label for="name">Name <span class="reqop">(required)</span></label>
-                            <input type="text" name="name" autocomplete="off" required>
+                            <label for="name">Name <span class="reqop">(required, minimum 2 letters)</span></label>
+                            <input type="text" name="name" autocomplete="off" >
                         </div>
                         <div class="contact--form__item">
-                            <label for="surname">Surname <span class="reqop">(required)</span></label>
-                            <input type="text" name="surname" autocomplete="off" required>
+                            <label for="surname">Surname <span class="reqop">(required, minimum 3 letters)</span></label>
+                            <input type="text" name="surname" autocomplete="off">
                         </div>
                         <div class="contact--form__item">
                             <label for="email">Email <span class="reqop">(required)</span></label>
-                            <input type="email" name="email" autocomplete="off" required>
+                            <input type="email" name="email" autocomplete="off">
                         </div>
                         <div class="contact--form__item">
                             <label for="age">Age <span class="reqop">(optional)</span></label>
@@ -76,8 +75,8 @@
                             </select>
                         </div>
                         <div class="contact--form__item">
-                            <label for="message">Message <span class="reqop">(required)</span></label>
-                            <textarea name="message" required></textarea>
+                            <label for="message">Message <span class="reqop">(required, minimun 15 letters)</span></label>
+                            <textarea name="message"></textarea>
                         </div>
                         <div class="contact--form__item">
                             <input id="contact--submit" type="submit" value="Send">
