@@ -6,6 +6,7 @@
         <title>myweb</title>
 
         <link type="text/css" rel="stylesheet" href="./css/styles.css">
+        <link type="text/css" rel="stylesheet" href="./css/calculator.css">
         <link id="theme" type="text/css" rel="stylesheet" href="./css/green-theme.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.min.css">
         <link type="text/css" rel="stylesheet" href="./jquery-ui/jquery-ui.structure.min.css">
@@ -46,9 +47,35 @@
             <main class="main">
 
                 <section class="section">
-                    <div id="calculator">
-                        
-                    </div>
+                    <form action="" name="calculator" id="calculator">
+                        <input type="textfield" name="ans" value="" readonly>
+
+                        <div>
+                            <input type="button" value="7" onclick="document.calculator.ans.value+='7'">
+                            <input type="button" value="8" onclick="document.calculator.ans.value+='8'">
+                            <input type="button" value="9" onclick="document.calculator.ans.value+='9'">
+                            <input type="button" value="+" onclick="document.calculator.ans.value+='+'" style="background-color: var(--primary-color);">
+                        </div>
+                        <div>
+                            <input type="button" value="4" onclick="document.calculator.ans.value+='4'">
+                            <input type="button" value="5" onclick="document.calculator.ans.value+='5'">
+                            <input type="button" value="6" onclick="document.calculator.ans.value+='6'">
+                            <input type="button" value="-" onclick="document.calculator.ans.value+='-'" style="background-color: var(--primary-color);">
+                        </div>
+                        <div>
+                            <input type="button" value="1" onclick="document.calculator.ans.value+='1'">
+                            <input type="button" value="2" onclick="document.calculator.ans.value+='2'">
+                            <input type="button" value="3" onclick="document.calculator.ans.value+='3'">
+                            <input type="button" value="X" onclick="document.calculator.ans.value+='*'" style="background-color: var(--primary-color);">
+                        </div>
+                        <div>                        
+                            <input type="button" value="0" onclick="document.calculator.ans.value+='0'">
+                            <input type="reset" value="C" style="background-color: #fff; color: #222;">
+                            <input type="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)" style="background-color: #fff; color: #222;">
+                            <input type="button" value="/" onclick="document.calculator.ans.value+='/'" style="background-color: var(--primary-color);">
+                        </div>
+                    </form>
+                    <div id="calendar"></div>
                 </section>
                 <aside class="aside">
                     <div class="whoim">
