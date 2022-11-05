@@ -1,5 +1,4 @@
 .section{
-    max-width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -51,3 +50,4 @@
 #calculator input[type=reset]:hover{filter: brightness(.9);}
 #calculator input[type=button]:active,
 #calculator input[type=reset]:active{filter: brightness(1);}
+@media (max-width: 870px){#calculator{width: 100%; margin-top: 2em;}}

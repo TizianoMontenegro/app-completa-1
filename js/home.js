@@ -43,11 +43,5 @@ $(document).ready(()=>{
             <p class="paragraph">${article.content}</p>
         </article>`;
         $(".section").append(post);
-        
-        //go up
-        $("#go-up").click((e)=>{
-            e.preventDefault();
-            $("html, body").animate({scrollTop: 0},400);
-        });
     });
 });

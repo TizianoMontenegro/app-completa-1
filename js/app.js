@@ -6,13 +6,13 @@ $(document).ready(()=>{
     // change theme
     let theme = $("#theme");
     $("#to-green").click(()=>{
-        theme.attr("href", "./css/green-theme.css")
+        theme.attr("href", "./css/green-theme.css");
     });
     $("#to-red").click(()=>{
-        theme.attr("href", "./css/red-theme.css")
+        theme.attr("href", "./css/red-theme.css");
     });
     $("#to-blue").click(()=>{
-        theme.attr("href", "./css/blue-theme.css")
+        theme.attr("href", "./css/blue-theme.css");
     });
 
     // sing up
@@ -36,4 +36,20 @@ $(document).ready(()=>{
             window.location.reload()
         })
     }
+        
+    // go up
+    $("#go-up").click((e)=>{
+        e.preventDefault();
+        $("html, body").animate({scrollTop: 0},400);
+    });
+
+    // menu responsive
+    let x = $(".x");
+    let bars = $(".bars");
+    x.hide()
+    $(".menur img").click(function(){
+        $(".header--2").toggleClass("aparecer");
+        x.toggle()
+        bars.toggle()
+    })
 });

@@ -63,3 +63,4 @@ textarea:focus{
     font-weight: 200;
     color: #555;
 }
+@media (max-width: 870px){.section{max-width: unset;}}

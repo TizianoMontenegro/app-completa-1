@@ -1,11 +1,25 @@
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
 #clock{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1em 2em;
     font-size: 1.5em;
-    border-radius: .8em;
+    border-radius: var(--br);
     background-color: var(--primary-color);
     color: #fff;
 }
 #clock--title{margin-left: .5em;}
+#calendar{
+    margin-top: 3em;
+}
+@media (max-width: 870px){
+    #clock{width: 100vw;}
+    h2{text-align: center;}
+    .ui-widget.ui-widget-content{width: 350px;}
+}

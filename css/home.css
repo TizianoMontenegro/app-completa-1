@@ -20,4 +20,25 @@
     margin: 0;
 }
 .article__left p{margin: 0;}
-.paragraph{text-align: justify;}
+@media (max-width: 870px){
+    .section{
+        display: flex;
+        flex-direction: column;
+        max-width: unset;
+        gap: 2em;
+        margin-top: 10em;
+    }
+    .article--header {
+        gap: 0.7em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .article--header button {
+        height: min-content;
+        padding: 1rem 0;
+        font-size: 1.2em;
+        width: 100%;
+    }
+}

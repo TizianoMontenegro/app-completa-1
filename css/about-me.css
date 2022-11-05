@@ -3,3 +3,4 @@
 .box li a{font-weight: 500;}
 
 .pr-color{color: var(--primary-color);}
+@media (max-width: 870px){.accordion{width: 100vw;}}
